@@ -16,10 +16,7 @@ export const SCREEN_STEP_DESCRIPTION_PROMPT = `You are describing steps in a gui
 Name the control by the label it shows, in quotes. Do not use technical control names such as "tree item", "treeview", "pane", "list item" or "group"; say "list", "menu", "field" or "button" only where a reader would. Only mention names that appear above. The previous step is there for context; describe only this one.
 
 Examples of good descriptions:
-- "Click "Downloads" in File Explorer"
-- "Select "Dark" from the Theme list"
-- "Enter "Quarterly report" as the file name"
-- "Press Ctrl+S to save the document"
+{{examples}}
 
 Write only the description, no preamble.`;
 
@@ -106,7 +103,7 @@ const LANGUAGE_INSTRUCTIONS: Record<Exclude<AILanguageCode, 'en'>, string> = {
   de: '\nWICHTIG: Schreibe die Ausgabe auf Deutsch. Übersetze keine Schaltflächen-, Feld- oder Seitennamen.',
   'zh-CN': '\n重要：请用中文输出。不要翻译按钮、字段和页面的名称。',
   ru: '\nВАЖНО: пиши результат на русском языке. Не переводи названия кнопок, полей и страниц.',
-  tr: '\nÖNEMLİ: Sonucu Türkçe yaz. Buton, alan ve sayfa adlarını çevirme.',
+  tr: '\nIMPORTANT: Respond only in Turkish (Türkçe). ÖNEMLİ: Sonucu yalnızca Türkçe yaz. Buton, alan ve sayfa adlarını çevirme.',
 };
 
 export function getLanguageSuffix(locale: string): string {

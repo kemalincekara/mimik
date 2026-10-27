@@ -3,6 +3,7 @@ import type { AILanguageCode } from './prompts';
 
 export interface PromptExamples {
   readonly steps: readonly string[];
+  readonly screenSteps: readonly string[];
   readonly titles: readonly string[];
   readonly descriptions: readonly string[];
 }
@@ -14,6 +15,12 @@ const EXAMPLES: Record<AILanguageCode, PromptExamples> = {
       'Enter email address in the Email field',
       'Select "Admin" from the Role dropdown',
       'Navigate to the Settings page',
+    ],
+    screenSteps: [
+      '"Click "Downloads" in File Explorer"',
+      '"Select "Dark" from the Theme list"',
+      '"Enter "Quarterly report" as the file name"',
+      '"Press Ctrl+S to save the document"',
     ],
     titles: [
       'Review web-app Pull Requests',
@@ -33,6 +40,12 @@ const EXAMPLES: Record<AILanguageCode, PromptExamples> = {
       'Seleccionar "Admin" en el desplegable Role',
       'Ir a la página Settings',
     ],
+    screenSteps: [
+      'Hacer clic en "Downloads" en el panel de navegación',
+      'Seleccionar "Dark" en la lista Theme',
+      'Escribir "Quarterly report" como nombre de archivo',
+      'Pulsar Ctrl+S para guardar el documento',
+    ],
     titles: [
       'Revisar los Pull Requests de web-app',
       'Configurar las notificaciones de Slack',
@@ -50,6 +63,12 @@ const EXAMPLES: Record<AILanguageCode, PromptExamples> = {
       "Saisir l'adresse e-mail dans le champ Email",
       'Sélectionner "Admin" dans la liste déroulante Role',
       'Aller à la page Settings',
+    ],
+    screenSteps: [
+      'Cliquer sur "Downloads" dans le volet de navigation',
+      'Sélectionner "Dark" dans la liste Theme',
+      'Saisir "Quarterly report" comme nom de fichier',
+      'Appuyer sur Ctrl+S pour enregistrer le document',
     ],
     titles: [
       'Examiner les Pull Requests de web-app',
@@ -69,6 +88,12 @@ const EXAMPLES: Record<AILanguageCode, PromptExamples> = {
       'In der Dropdown-Liste Role "Admin" auswählen',
       'Zur Seite Settings navigieren',
     ],
+    screenSteps: [
+      'Im Navigationsbereich auf "Downloads" klicken',
+      'In der Liste Theme "Dark" auswählen',
+      '"Quarterly report" als Dateinamen eingeben',
+      'Strg+S drücken, um das Dokument zu speichern',
+    ],
     titles: [
       'Pull Requests von web-app prüfen',
       'Slack-Benachrichtigungen konfigurieren',
@@ -86,6 +111,12 @@ const EXAMPLES: Record<AILanguageCode, PromptExamples> = {
       'Digitar o endereço de e-mail no campo Email',
       'Selecionar "Admin" na lista Role',
       'Ir para a página Settings',
+    ],
+    screenSteps: [
+      'Clicar em "Downloads" no painel de navegação',
+      'Selecionar "Dark" na lista Theme',
+      'Digitar "Quarterly report" como nome do arquivo',
+      'Pressionar Ctrl+S para salvar o documento',
     ],
     titles: [
       'Revisar os Pull Requests do web-app',
@@ -105,6 +136,12 @@ const EXAMPLES: Record<AILanguageCode, PromptExamples> = {
       '在 Role 下拉菜单中选择 "Admin" 选项',
       '进入 Settings 页面',
     ],
+    screenSteps: [
+      '在导航窗格中点击 "Downloads"',
+      '在 Theme 列表中选择 "Dark"',
+      '输入 "Quarterly report" 作为文件名',
+      '按 Ctrl+S 保存文档',
+    ],
     titles: [
       '审查 web-app 的 Pull Request',
       '配置 Slack 通知偏好',
@@ -123,6 +160,12 @@ const EXAMPLES: Record<AILanguageCode, PromptExamples> = {
       'Выбрать "Admin" в раскрывающемся списке Role',
       'Перейти на страницу Settings',
     ],
+    screenSteps: [
+      'Нажать "Downloads" в области навигации',
+      'Выбрать "Dark" в списке Theme',
+      'Ввести "Quarterly report" в качестве имени файла',
+      'Нажать Ctrl+S, чтобы сохранить документ',
+    ],
     titles: [
       'Проверка Pull Request в web-app',
       'Настройка уведомлений Slack',
@@ -140,6 +183,12 @@ const EXAMPLES: Record<AILanguageCode, PromptExamples> = {
       'Email alanına e-posta adresini yazın',
       'Role açılır listesinden "Admin" seçeneğini seçin',
       'Settings sayfasına gidin',
+    ],
+    screenSteps: [
+      'Gezinti bölmesinde "Downloads" öğesine tıklayın',
+      'Theme listesinden "Dark" seçeneğini seçin',
+      'Dosya adı olarak "Quarterly report" girin',
+      'Belgeyi kaydetmek için Ctrl+S tuşlarına basın',
     ],
     titles: [
       "web-app'teki Pull Request'leri inceleme",
