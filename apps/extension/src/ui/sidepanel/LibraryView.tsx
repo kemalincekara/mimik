@@ -11,6 +11,7 @@ import {
   toggleStar,
 } from '@/core/guides/service';
 import type { Guide } from '@/core/guides/types';
+import { foldCase } from '@/core/i18n/fold-case';
 import { openDashboard } from './lib/open-dashboard';
 
 interface LibraryViewProps {
@@ -78,9 +79,7 @@ export function LibraryView({ onOpen, searchQuery = '' }: LibraryViewProps) {
     [loadGuides],
   );
 
-  const filtered = searchQuery
-    ? guides.filter((g) => g.title.toLowerCase().includes(searchQuery.toLowerCase()))
-    : guides;
+  const filtered = searchQuery ? guides.filter((g) => foldCase(g.title).includes(foldCase(searchQuery))) : guides;
 
   if (loading) {
     return <p className="text-sm py-4 text-purple">{i18n.t('common.loading')}</p>;

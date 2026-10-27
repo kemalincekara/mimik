@@ -134,6 +134,24 @@ const EXAMPLES: Record<AILanguageCode, PromptExamples> = {
       'Выбор каналов Slack, которые отправляют уведомления на рабочий стол, и настройка расписания режима «Не беспокоить».',
     ],
   },
+  tr: {
+    steps: [
+      'Submit düğmesine tıklayın',
+      'Email alanına e-posta adresini yazın',
+      'Role açılır listesinden "Admin" seçeneğini seçin',
+      'Settings sayfasına gidin',
+    ],
+    titles: [
+      "web-app'teki Pull Request'leri inceleme",
+      'Slack bildirimlerini yapılandırma',
+      "Workday'de masraf raporu gönderme",
+      'GitHub organizasyonunda depo oluşturma',
+    ],
+    descriptions: [
+      'Okta yönetim panelinde kilitlenmiş bir kullanıcının parolasını sıfırlama. BT destek ekibi için.',
+      'Masaüstü bildirimi gönderecek Slack kanallarını seçme ve bir Rahatsız Etmeyin zamanlaması ayarlama.',
+    ],
+  },
 };
 
 export function resolveExamples(locale: string): PromptExamples {

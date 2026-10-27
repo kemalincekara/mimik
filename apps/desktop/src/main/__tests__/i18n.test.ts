@@ -9,12 +9,13 @@ vi.mock('@mimik/locales/es.yml', () => ({ default: {} }));
 vi.mock('@mimik/locales/fr.yml', () => ({ default: {} }));
 vi.mock('@mimik/locales/zh-CN.yml', () => ({ default: {} }));
 vi.mock('@mimik/locales/ru.yml', () => ({ default: {} }));
+vi.mock('@mimik/locales/tr.yml', () => ({ default: {} }));
 
 import { mainI18n } from '../i18n';
 
 describe('mainI18n', () => {
-  it('matches a regional locale to its language and falls back to English per key', () => {
-    mainI18n.setLocale('pt-PT');
+  it('takes a resolved locale and falls back to English per key', () => {
+    mainI18n.setLocale('pt-BR');
     expect(mainI18n.t('desktop.trayQuit')).toBe('Sair do Mimik');
     expect(mainI18n.t('desktop.later')).toBe('Later');
     expect(mainI18n.t('desktop.upToDateMessage', ['1.2.0'])).toBe('Mimik 1.2.0 is current.');

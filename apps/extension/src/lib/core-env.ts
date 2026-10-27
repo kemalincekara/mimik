@@ -9,3 +9,5 @@ configureCore({
   assetUrl: (path) => getExtensionURL(path as never),
   storage: localStorage,
 });
+
+if (typeof document !== 'undefined') document.documentElement.lang = i18n.t('meta.locale');

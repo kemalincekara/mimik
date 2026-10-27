@@ -5,7 +5,7 @@ import { MAX_TITLE_LENGTH, sanitizeGuideTitle } from '@/core/guides/title';
 import type { Step } from '@/core/guides/types';
 import { logger } from '@/core/logger';
 import { formatExamples, resolveExamples } from './examples';
-import { GUIDE_META_JSON_SUFFIX, GUIDE_META_PROMPT, getLanguageSuffix } from './prompts';
+import { DEFAULT_AI_LANGUAGE, GUIDE_META_JSON_SUFFIX, GUIDE_META_PROMPT, getLanguageSuffix } from './prompts';
 import { createModel } from './provider';
 import { unwrapQuotes } from './text';
 
@@ -67,7 +67,7 @@ export async function generateGuideMeta(
 
   const formatted = steps.map((s, i) => `${i + 1}. [${s.place}] ${s.description}`).join('\n');
   const settings = await localStorage.get(['aiLanguage']);
-  const locale = (settings.aiLanguage as string) || 'en';
+  const locale = (settings.aiLanguage as string) || DEFAULT_AI_LANGUAGE;
   const examples = resolveExamples(locale);
   const prompt =
     GUIDE_META_PROMPT.replace('{{titleExamples}}', formatExamples(examples.titles))

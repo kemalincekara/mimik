@@ -6,13 +6,16 @@ describe('appLocale', () => {
     expect(appLocale('de', 'en-US')).toBe('de');
   });
 
-  it('follows the system when nothing or an unknown language is picked', () => {
-    expect(appLocale(null, 'fr-CA')).toBe('fr');
+  it('follows the system only when the system option is picked', () => {
+    expect(appLocale('system', 'fr-CA')).toBe('fr');
     expect(appLocale('system', 'zh-CN')).toBe('zh-CN');
-    expect(appLocale(undefined, 'pt-PT')).toBe('pt-BR');
+    expect(appLocale('system', 'pt-PT')).toBe('pt-BR');
   });
 
-  it('falls back to English for a language Mimik does not ship', () => {
-    expect(appLocale(null, 'ja-JP')).toBe('en');
+  it('falls back to Turkish when nothing, an unknown language or an unshipped system language is picked', () => {
+    expect(appLocale(null, 'fr-CA')).toBe('tr');
+    expect(appLocale(undefined, 'en-US')).toBe('tr');
+    expect(appLocale('ja', 'en-US')).toBe('tr');
+    expect(appLocale('system', 'ja-JP')).toBe('tr');
   });
 });

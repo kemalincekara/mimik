@@ -14,7 +14,7 @@ export function StarCard() {
         <p className="text-[13.5px] font-semibold text-foreground">{i18n.t('onboarding.starCardTitle')}</p>
         <p className="text-[12px] text-muted-foreground">{i18n.t('onboarding.starCardMessage')}</p>
       </div>
-      <Button onClick={() => void tabs.create('https://github.com/westpoint-io/mimik')} className="rounded-[10px]">
+      <Button onClick={() => void tabs.create('https://github.com/kemalincekara/mimik')} className="rounded-[10px]">
         <Star size={15} className="fill-amber-400 text-amber-400" />
         {i18n.t('settings.starOnGithub')}
       </Button>

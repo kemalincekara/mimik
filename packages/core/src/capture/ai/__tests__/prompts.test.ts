@@ -45,6 +45,10 @@ describe('getLanguageSuffix', () => {
     expect(getLanguageSuffix('ru')).toContain('на русском языке');
   });
 
+  it('writes the Turkish instruction in Turkish', () => {
+    expect(getLanguageSuffix('tr')).toContain('Türkçe yaz');
+  });
+
   it('matches a regional locale to its base language', () => {
     expect(getLanguageSuffix('fr-CA')).toBe(getLanguageSuffix('fr'));
   });
@@ -74,12 +78,12 @@ describe('getLanguageSuffix', () => {
 });
 
 describe('AI_LANGUAGES', () => {
-  it('has 7 supported languages', () => {
-    expect(AI_LANGUAGES).toHaveLength(7);
+  it('has 8 supported languages', () => {
+    expect(AI_LANGUAGES).toHaveLength(8);
   });
 
-  it('includes English as first entry', () => {
-    expect(AI_LANGUAGES[0]).toEqual({ code: 'en', label: 'English' });
+  it('includes Turkish as first entry', () => {
+    expect(AI_LANGUAGES[0]).toEqual({ code: 'tr', label: 'Türkçe' });
   });
 
   it('includes Simplified Chinese', () => {
@@ -88,6 +92,10 @@ describe('AI_LANGUAGES', () => {
 
   it('includes Russian', () => {
     expect(AI_LANGUAGES).toContainEqual({ code: 'ru', label: 'Русский' });
+  });
+
+  it('includes Turkish', () => {
+    expect(AI_LANGUAGES).toContainEqual({ code: 'tr', label: 'Türkçe' });
   });
 
   it('each entry has code and label', () => {

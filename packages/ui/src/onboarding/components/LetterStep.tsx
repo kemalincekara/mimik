@@ -6,7 +6,7 @@ import { Button } from '../../components/ui/button';
 import { tabs } from '../../env';
 import { StepNav } from './StepNav';
 
-const REPO_URL = 'https://github.com/westpoint-io/mimik';
+const REPO_URL = 'https://github.com/kemalincekara/mimik';
 const SLOT = '[[slot]]';
 const PARAGRAPH = 'text-[13.5px] leading-relaxed text-foreground/80';
 const LINK = 'font-semibold text-foreground underline underline-offset-[3px]';

@@ -4,7 +4,7 @@ import { Button } from '../../components/ui/button';
 import { tabs } from '../../env';
 import { MascotIcon } from './MascotIcon';
 
-const REPO_URL = 'https://github.com/westpoint-io/mimik';
+const REPO_URL = 'https://github.com/kemalincekara/mimik';
 
 export function GitHubCard() {
   return (

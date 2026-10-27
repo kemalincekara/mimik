@@ -1,6 +1,7 @@
 import { i18n } from '@mimik/core/env';
 import { getGuides } from '@mimik/core/guides/service';
 import type { Guide, Screenshot } from '@mimik/core/guides/types';
+import { foldCase } from '@mimik/core/i18n/fold-case';
 import { Search } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { MascotIcon } from '../../common/components/MascotIcon';
@@ -55,9 +56,9 @@ export function SearchModal() {
 
   const shown = useMemo(() => {
     if (!guides) return [];
-    const needle = query.trim().toLowerCase();
+    const needle = foldCase(query.trim());
     if (!needle) return guides.slice(0, RECENT);
-    return guides.filter((g) => g.title.toLowerCase().includes(needle)).slice(0, SHOWN);
+    return guides.filter((g) => foldCase(g.title).includes(needle)).slice(0, SHOWN);
   }, [guides, query]);
 
   useEffect(() => {

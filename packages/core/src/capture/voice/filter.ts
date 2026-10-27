@@ -29,6 +29,11 @@ const BLOCKLIST = new Set(
     'субтитры сделал dimatorzok',
     "sous-titres réalisés par la communauté d'amara.org",
     '由 amara.org 社群提供的字幕',
+    'altyazı m.k.',
+    'altyazı',
+    'izlediğiniz için teşekkürler',
+    'izlediğiniz için teşekkür ederim',
+    'abone olmayı unutmayın',
   ].map(normalise),
 );
 

@@ -1,7 +1,7 @@
 import { i18n } from '@mimik/core/env';
 import { Sparkles, X } from 'lucide-react';
 
-const RELEASES_URL = 'https://github.com/westpoint-io/mimik/releases';
+const RELEASES_URL = 'https://github.com/kemalincekara/mimik/releases';
 
 interface UpdateNoticeProps {
   version: string | undefined;

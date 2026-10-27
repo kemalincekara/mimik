@@ -1,0 +1,800 @@
+meta:
+  locale: tr
+
+app:
+  name: Mimik
+  store_title: "Mimik: Adım Adım Kılavuzlar ve Eğitimler"
+  description: "Tarayıcıdaki her iş akışını adım adım kılavuza dönüştürün. Düzenleyin, seslendirin; video, PDF veya DOCX olarak aktarın."
+
+common:
+  loading: Yükleniyor…
+  cancel: İptal
+  save: Kaydet
+  delete: Sil
+  back: Geri
+  continue: Devam
+  skip: Atla
+  export: Dışa aktar
+  close: Kapat
+  undo: Geri al
+  star: Yıldızla
+  unstar: Yıldızı kaldır
+  restore: Geri yükle
+  updated: "v$1 sürümüne güncellendi"
+  whatsNew: Yenilikleri görün
+
+sidepanel:
+  connected: Bağlandı
+  connecting: Bağlanıyor…
+  heroTitle: Neyi kaydetmek istersiniz?
+  heroSubtitle: Her iş akışını otomatik olarak kaydedin
+  searchPlaceholder: Kılavuzlarda ara…
+  recentLabel: Son kullanılanlar
+  notRecordable: Kayda başlamak için bir web sitesi açın
+
+library:
+  noGuidesTitle: Henüz kılavuz yok
+  noGuidesSub: İlk kılavuzunuzu oluşturmak için bir kayıt başlatın
+  noStarredTitle: Yıldızlı kılavuz yok
+  noStarredSub: Hızlıca bulmak için bir kılavuzu yıldızlayın
+  trashEmptyTitle: Çöp kutusu boş
+  trashEmptySub: Tertemiz!
+  noMatchingGuides: Eşleşen kılavuz yok
+  moveToTrash: Çöp kutusuna taşı
+  deletePermanently: Kalıcı olarak sil
+  openInFullView: Tam görünümde aç
+  openDashboard: "Paneli aç"
+  openDashboardHint: "Kılavuzlara oradan göz atın, içe ve dışa aktarın"
+  duplicate: Çoğalt
+  copyOfTitle: "$1 (kopya)"
+  duplicateFailed: Bu kılavuz çoğaltılamadı
+  collapseSidebar: Kenar çubuğunu daralt
+  expandSidebar: Kenar çubuğunu genişlet
+  allGuides: "Tüm kılavuzlar"
+  starred: Yıldızlı
+  trash: Çöp kutusu
+  searchPlaceholder: Kılavuzlarda ara…
+
+guideme:
+  live: Canlı
+  roadblock: "Bu adım sayfada bulunamadı. Devam etmek için kendiniz yapın."
+  manualStep: "Düzenlenmiş adımlar algılanamaz. Yaptığınızda İleri'ye tıklayın."
+  stepOf: "Adım $1 / $2"
+  noDescription: Açıklama yok
+  prev: Önceki
+  next: İleri
+  finish: "Bitir"
+  exitTitle: Çıkıyor musunuz?
+  exitMessage: "Rehberli anlatım ve sayfadaki katmanı kapanacak."
+  stay: Kal
+  exit: Çık
+  guideNotFound: Kılavuz bulunamadı
+
+guidemeCompletion:
+  title: "Hepsi tamam, şampiyon!"
+  stepsCompleted: "$1 adım tamamlandı."
+  stepsCompletedPlural: "$1 adımın tümü tamamlandı."
+  allDone: "Tamamlandı"
+  runAgain: "Yeniden çalıştır"
+
+recording:
+  capturePaused: Kayıt duraklatıldı
+  capturePausedBlur: Bulanıklaştırma modu · kayıt duraklatıldı
+  pauseCapture: Kaydı duraklat
+  resumeCapture: Kayda devam et
+  recording: "Kaydediliyor · $1 adım"
+  recordingPlural: "Kaydediliyor · $1 adım"
+  readyTitle: "Kayda hazır"
+  readySub: Başlamak için sayfaya tıklayın
+  finishRecording: "Kaydı bitir"
+  finish: Bitir
+  smartBlur: "Smart Blur"
+  discard: Vazgeç
+  deleteStep: Adımı sil
+  justNow: Az önce
+  secondsAgo: "$1 sn önce"
+  minutesAgo: "$1 dk önce"
+
+settings:
+  cardKeyboard: "Yazma ve tuşlar"
+  cardKeyboardHint: "Klavyenizin kılavuza ekledikleri."
+  recordKeys: "Kısayolları ve adlandırılmış tuşları kaydet"
+  recordKeysHint: "Ctrl+S, Enter ve benzerleri adım olur."
+  recordTyping: "Yazdıklarınızı kaydet"
+  recordTypingHint: "Bir alana yazdığınız her şey tek bir adım olur."
+  microphoneAccess: "Mikrofon erişimi"
+  microphoneAccessAsk: "Mimik sizi duyabilmeden önce tarayıcınız bir kez izin ister."
+  microphoneAccessAllow: "İzin ver"
+  title: Ayarlar
+  aiDescriptions: "Adım açıklamaları"
+  aiDescriptionsHint: "Mimik, her adımın metnini yazar ve kılavuzunuzu AI sağlayıcınızla adlandırır."
+  aiUseFor: "AI kullanımı"
+  aiForSteps: "Adım açıklamaları"
+  aiForStepsHint: "Her ekran görüntüsünün altındaki metin."
+  aiForGuide: "Kılavuz başlığı ve özeti"
+  aiForGuideHint: "Kaydı bitirdiğinizde yazılır."
+  aiUnusedNote: "Adımlar temel başlıklarını korur ve kılavuz, site ya da uygulamanın adını alır. Sesli anlatım ve seslendirme yine anahtarınızı kullanır."
+  provider: Sağlayıcı
+  model: Model
+  modelCustom: Özel model
+  baseUrl: Temel URL
+  ownServerHintOpenai: "Ollama, LM Studio, vLLM veya OpenAI uyumlu herhangi bir sunucuyla çalışır."
+  ownServerHintAnthropic: "Bir LiteLLM proxy'si veya Anthropic uyumlu herhangi bir sunucuyla çalışır."
+  apiKey: "API anahtarı"
+  showKey: Anahtarı göster
+  hideKey: Anahtarı gizle
+  clearKey: Anahtarı temizle
+  aiLanguage: "Açıklama dili"
+  apiKeys: "API anahtarları"
+  aiSection: "AI"
+  ownServer: "Kendi sunucunuz"
+  optional: "İsteğe bağlı"
+  serverSpeaks: "Uyumlu olduğu"
+  protocolOpenai: "OpenAI"
+  protocolAnthropic: "Anthropic"
+  noServer: "Henüz sunucu adresi yok."
+  noKeyFor: "Henüz $1 anahtarı yok."
+  addOneInKeys: "API anahtarları bölümünden ekleyin."
+  addKey: "Anahtar ekle"
+  noKey: "Anahtar yok"
+  voiceover: "Video seslendirmesi"
+  voiceoverHint: "Mimik, dışa aktarılan videoda her adımın metnini seslendirir."
+  voice: "Ses"
+  voiceNarrationHint: "İş akışını anlatın, Mimik her adımı söylediklerinizden yazsın."
+  voiceNarration: "Sesli anlatım"
+  aiNoKey: "API anahtarı olmadan adımlar kurallara dayalı temel açıklamalar alır."
+  microphone: Mikrofon
+  microphoneDefault: Sistem varsayılanı
+  microphoneNeedsAccess: Cihaz adlarını görmek için mikrofon erişimine izin verin.
+  microphoneGrantAccess: Mikrofon erişimine izin ver
+  microphoneNone: "Mikrofon bulunamadı. Burada görmek için bir mikrofon takın."
+  microphoneUnavailable: Kullanılamayan mikrofon
+  microphoneMissing: "Seçtiğiniz mikrofon bağlı değil. Sistem varsayılanı kullanılıyor."
+  microphoneTest: Mikrofonu test et
+  microphoneStatusAllowed: İzin verildi
+  microphoneStatusBlocked: Engellendi
+  microphoneStatusPending: Henüz izin verilmedi
+  microphoneBlocked: "Mikrofon engellendi. Adres çubuğunun solundaki simgeye tıklayın ve Mikrofon'u İzin ver olarak ayarlayın."
+  microphoneUnblockHow: Engeli nasıl kaldırırım?
+  microphoneTestStop: Testi durdur
+  microphoneTestFailed: "Bu mikrofon açılamadı. Başka birini deneyin."
+  targetColor: "Tıklama vurgusu"
+  brandColor: "Marka rengi"
+  targetColorHint: "Tıkladığınız öğenin çevresine çizilen çerçeve."
+  brandColorHint: "Dışa aktarılan kılavuzlardaki vurgular."
+  branding: "Dışa aktarma markası"
+  logoAndFooter: "Logo ve alt bilgi"
+  logoAndFooterHint: "Dışa aktardığınız her kılavuzda gösterilir."
+  brandLogo: "Logo"
+  uploadLogo: "Logo yükle"
+  replaceLogo: "Değiştir"
+  removeLogo: "Logoyu kaldır"
+  footerLine: "Alt bilgi satırı"
+  footerLinePlaceholder: "ör. Gizli · Yalnızca dahili kullanım"
+  footerPresetConfidential: "Gizli · Yalnızca dahili kullanım"
+  footerPresetNoDistribute: "Dağıtmayın"
+  attribution: "\"Mimik ile yapıldı\" ibaresini göster"
+  saveSettings: "Ayarları kaydet"
+  saved: Kaydedildi
+  validatingKey: "Anahtar kontrol ediliyor…"
+  keyValid: API anahtarı doğrulandı.
+  keyChecking: "Kontrol ediliyor…"
+  keyVerified: "Doğrulandı"
+  keyRejected: "Reddedildi"
+  keyOffline: "Ulaşılamıyor"
+  keyCheckModel: "Modeli kontrol et"
+  keyInvalid: "Sağlayıcı bu anahtarı reddetti. Kontrol edip yeniden deneyin."
+  keyModelRequired: Bu anahtarı kontrol etmeden önce bir model seçin.
+  keyModelInvalid: Seçilen model bu sağlayıcıda kullanılamıyor.
+  checkKey: Anahtarı kontrol et
+  keyCannotSpend: "Bu anahtarın kredisi yok. Yalnızca ücretsiz modeller çalışır."
+  keyUnreachable: "Sağlayıcıya ulaşılamadı. Bağlantınızı kontrol edin."
+  modelsFound: "$1 model kullanılabilir"
+  smartBlur: "Smart Blur"
+  privacyNotice: "Anahtarlar ve ses yalnızca seçtiğiniz sağlayıcıya gider."
+  reportBug: "Hata bildir"
+  aboutSection: "Hakkında"
+  starCtaTitle: "Beğendiniz mi?"
+  starCtaMessage: "GitHub'da bir yıldız, Mimik'i başkalarının bulmasına yardımcı olur."
+  starOnGithub: GitHub'da yıldızla
+
+blurPresets:
+  email: E-posta
+  phoneNumbers: "Telefon numaraları"
+  ssn: Kimlik numarası
+  creditCard: "Kredi kartı"
+  ipAddress: "IP adresi"
+  macAddress: "MAC adresi"
+
+desktop:
+  collapse: "Daralt"
+  expand: "Genişlet"
+  starting: "Başlatılıyor…"
+  capturingStep: "$1. adım kaydediliyor"
+  tipArmed: "Her tıklama bir adım olarak kaydedilir."
+  tipPaused: "Duraklatıldığında hiçbir şey kaydedilmez."
+  tipWaiting: "İlk tıklamanız burada görünecek."
+  tipLabel: "İpucu:"
+  hintStartStop: "başlatmak ve durdurmak için $1 tuşuna basabilirsiniz."
+  hintCapture: "tıklamadan kaydetmek için $1 tuşuna basabilirsiniz."
+  micAccessAsk: "Mimik sizi duyabilmeden önce macOS bir kez izin ister."
+  micAccessRefused: "Reddedildi. Gizlilik ve Güvenlik bölümünden Mimik'i açın."
+  armed: Hazır
+  screenshotDelay: Ekran görüntüsü gecikmesi
+  keepClicksBeyondArea: Alanın dışındaki tıklamaları kaydet
+  keepClicksBeyondAreaHint: "Alan modunda, alanın dışındaki tıklamalar da alanla çerçevelenmiş adımlar olur."
+  guideInApp: "$1 kılavuzu"
+  capturingSection: Kayıt
+  milliseconds: ms
+  captureMode: Neyin kaydedileceği
+  modeWindow: Pencere
+  modeScreen: Ekran
+  modeArea: Alan
+  drawArea: "Kayıt alanını çizmek için sürükleyin"
+  startSheetTitle: Kayıt başlat
+  permissionsTitle: "Mimik'in kaydetmesine izin verin"
+  permissionsIntro: "Mimik'in kayıt yapabilmesi için iki izin gerekiyor."
+  permissionAccessibility: "Erişilebilirlik"
+  permissionAccessibilityHint: "Mimik'in tıkladığınız ve yazdığınız şeyleri görmesini sağlar."
+  permissionScreen: "Ekran Kaydı"
+  permissionScreenHint: "Mimik'in her adımın ekran görüntüsünü almasını sağlar."
+  permissionScreenRestart: "Bunu açmayı tamamlamak için Mimik'i yeniden başlatın."
+  permissionRestart: "Mimik'i yeniden başlat"
+  moreStepsAfter: "Yeni adımlar $1. adımdan sonra eklenir."
+  moreStepsFirst: "Yeni adımlar 1. adımdan önce eklenir."
+  startButton: Başlat
+  shortcutsSection: "Kısayollar"
+  generalSection: "Genel"
+  appLanguage: "Uygulama dili"
+  appLanguageHint: "Mimik'in kendi ekranlarının dili. Adım açıklamalarının ayrı bir dil ayarı vardır."
+  languageSystem: "Sistemle aynı"
+  cardLanguage: "Dil"
+  cardStartup: "Başlangıç"
+  cardUpdates: "Güncellemeler"
+  startAtLogin: "Oturum açılınca başlat"
+  startAtLoginHint: "Mimik pencere olmadan, sistem tepsisinde açılır."
+  startAtLoginHintMac: "Mimik oturum açtığınızda açılır."
+  version: "Sürüm $1"
+  versionHint: "Mimik her başladığında güncellemeleri denetler."
+  checkUpdates: "Güncellemeleri denetle"
+  trayQuit: "Mimik'ten çık"
+  trayRecording: "Mimik kaydediyor. Bitirmek için tıklayın."
+  cannotRecord: "Mimik kayıt yapamıyor"
+  updateReady: "Güncelleme hazır"
+  updateReadyMessage: "Mimik $1 yüklenmeye hazır."
+  restartNow: "Şimdi yeniden başlat"
+  later: "Daha sonra"
+  updateFailed: "Güncelleme denetimi başarısız oldu"
+  updateFailedMessage: "Mimik güncelleme sunucusuna ulaşamadı. Daha sonra yeniden deneyin."
+  upToDate: "Güncel"
+  upToDateMessage: "Mimik $1 güncel."
+  cardScreenshots: "Ekran görüntüleri"
+  cardGlobalKeys: "Genel kısayollar"
+  cardGlobalKeysHint: "Mimik çalışırken her uygulamada geçerlidir."
+  zoomLevel: "Tıklamaya yakınlaştır"
+  zoomLevelHint: "Yeni kayıtlar buradan başlar. Otomatik, her adımı aynı boyutta tutar."
+  zoomAuto: "Otomatik"
+  zoomGuide: "Yakınlaştırma"
+  typingDebounce: "Yazma adımını kapatma süresi"
+  typingDebounceHint: "Bu uzunlukta bir duraklama yazma adımını bitirir."
+  cardScreenshotsHint: "Her adımın ekran görüntüsünün neyi gösterdiği."
+  captureModeHint: "Pencere, tıkladığınız uygulamayı izler."
+  screenshotDelayHint: "Animasyonlu menüler için ekran görüntüsü almadan önce bekleyin."
+  seconds: "sn"
+  shortcutRecord: "Kaydı başlat veya bitir"
+  shortcutPause: "Duraklat veya devam et"
+  shortcutCapture: "Şimdi bir adım kaydet"
+  shortcutPress: "Tuşlara basın…"
+  shortcutClear: "Temizle"
+
+guide:
+  guideMe: "Guide Me"
+  untitled: "Adsız kılavuz"
+  writingTitle: Kaydedilen adımlardan bir başlık yazılıyor...
+  writingDescription: "Açıklama yazılıyor…"
+  notFound: "Kılavuz bulunamadı"
+  stepCount: "$1 adım"
+  stepCountPlural: "$1 adım"
+  pageOf: "$1 / $2"
+  onDomain: "$1 kılavuzu"
+  newGuide: "Yeni kılavuz"
+
+sort:
+  recentFirst: Önce en yeni
+  oldestFirst: Önce en eski
+  alphaAZ: "A–Z"
+  mostSteps: En çok adım
+  gridView: Izgara görünümü
+  listView: Liste görünümü
+
+search:
+  recent: "Son kullanılanlar"
+  results: "$1 kılavuz"
+  resultsOne: "1 kılavuz"
+  noMatch: "“$1” ile eşleşen kılavuz yok"
+  noMatchHint: "Kılavuz başlığındaki bir kelimeyi deneyin."
+  noGuidesYet: Henüz kılavuz yok
+
+confirmDelete:
+  title: "Kılavuz silinsin mi?"
+  message: Bu kılavuz kalıcı olarak silinecek. Bu işlem geri alınamaz.
+  confirm: Kalıcı olarak sil
+
+editor:
+  backToLibrary: Kitaplığa dön
+  openInDashboard: Aç
+  openInDashboardHint: Düzenlemek veya dışa aktarmak için panelde açın
+  guideMe: "Guide Me"
+  guideMeUnavailable: Bu kılavuzda yeniden oynatılabilir adım yok
+  deleteThisStep: "Bu adım silinsin mi?"
+  selectStep: Adımı seç
+  selectedCount: "$1 seçildi"
+  deleteSelectedStep: "Seçili $1 adım silinsin mi?"
+  deleteSelectedSteps: "Seçili $1 adım silinsin mi?"
+  copyScreenshot: Ekran görüntüsünü kopyala
+  noScreenshot: Ekran görüntüsü yok
+  edit: Düzenle
+  done: Bitti
+  versionHistory: Sürüm geçmişi
+  moreActions: Diğer işlemler
+  generateDescription: Açıklama oluştur
+  regenerateDescription: Açıklamayı yeniden oluştur
+  generatingDescription: "Oluşturuluyor…"
+  descriptionPlaceholder: Açıklama ekleyin
+  descriptionErrorNoApiKey: "Açıklama oluşturmak için Ayarlar'dan bir AI API anahtarı ekleyin."
+  descriptionErrorNoSteps: "Bu kılavuzda özetlenecek açıklamalı adım yok."
+  descriptionErrorFailed: Açıklama oluşturulamadı. Yeniden deneyin.
+  descriptionErrorSaveFailed: "Yeni açıklama kaydedilemedi. Yeniden deneyin."
+  writingStepDescription: "Açıklama yazılıyor…"
+  transcribingStepDescription: "Söyledikleriniz yazıya dökülüyor…"
+  rewriteAskAi: AI'a sor
+  rewritePlaceholder: "Bu metni nasıl düzenleyeceğini AI'a söyleyin…"
+  rewriteEnter: Enter
+  rewriteShorter: Daha kısa
+  rewriteDetail: Daha ayrıntılı
+  rewriteGrammar: Dil bilgisini düzelt
+  rewriteFormal: Daha resmî
+  rewriteCasual: Daha samimi
+  rewriteReplace: Değiştir
+  rewriteDiscard: Vazgeç
+  rewriteErrorNoApiKey: "Metni yeniden yazmak için Ayarlar'dan bir AI API anahtarı ekleyin."
+  rewriteErrorFailed: Seçim yeniden yazılamadı. Yeniden deneyin.
+  rewriteErrorStale: Metin değişti. Yeniden seçin.
+  restoreSpoken: Söylediklerinizi geri yükleyin
+
+capture:
+  recordSteps: Adımları kaydet
+  moreStepsTitle: Daha fazla adım kaydet
+  moreStepsBody: Yeni adımlar buraya eklenir. Kaydın yapılacağı sekmeyi seçin.
+  newCaptureBody: Kaydın yapılacağı sekmeyi seçin.
+  startCapture: Kaydı başlat
+  noRecordableTabs: Bu pencerede kaydedilebilir sekme açık değil.
+
+blocks:
+  add: Blok ekle
+  heading: Başlık
+  callout: Not
+  headingPlaceholder: Bölüm başlığı
+  calloutPlaceholder: Bir not yazın
+  deleteHeading: "Bu başlık silinsin mi?"
+  deleteCallout: "Bu not silinsin mi?"
+  variantInfo: Bilgi
+  variantWarning: Uyarı
+  variantError: Hata
+  variantSuccess: Başarılı
+  variantCustom: Özel
+
+history:
+  title: "Sürüm geçmişi"
+  current: Geçerli
+  restore: Geri yükle
+  unchangedVersions: "Değişmemiş sürümler ($1)"
+  readOnlyBanner: "Önceki bir sürümü görüntülüyorsunuz. Geri dönmek için sürüm geçmişini kapatın."
+  loadError: Sürüm geçmişi yüklenemedi. Yeniden deneyin.
+  restoreError: Geri yüklenemedi. Birazdan yeniden deneyin.
+  storageFull: Geri alma noktasını kaydetmek için yeterli depolama alanı yok. Bir kılavuzu silip yeniden deneyin.
+  empty: "Henüz önceki sürüm yok. Bir sürüm oluşturmak için kılavuzu düzenleyin."
+  nameVersion: Bu sürümü adlandır
+  namePlaceholder: Sürüm adı
+  allVersions: Tüm sürümler
+  namedOnly: Yalnızca adlandırılmış sürümler
+  emptyNamed: "Henüz adlandırılmış sürüm yok."
+  renameError: Bu ad kaydedilemedi. Yeniden deneyin.
+  changeTitle: Başlık değişti
+  changeStepAdded: "$1 adım eklendi"
+  changeStepsAdded: "$1 adım eklendi"
+  changeStepRemoved: "$1 adım silindi"
+  changeStepsRemoved: "$1 adım silindi"
+  changeStepEdited: "$1 adım düzenlendi"
+  changeStepsEdited: "$1 adım düzenlendi"
+  changeStepReordered: Adımlar yeniden sıralandı
+  changeLink: "$1 bağlantı değişti"
+  changeLinks: "$1 bağlantı değişti"
+  changeImageReplaced: "$1 görsel değiştirildi"
+  changeImagesReplaced: "$1 görsel değiştirildi"
+  changeImageCropped: "$1 görsel kırpıldı"
+  changeImagesCropped: "$1 görsel kırpıldı"
+  changeImageAnnotated: "$1 görsele not eklendi"
+  changeImagesAnnotated: "$1 görsele not eklendi"
+  changeImageBlurred: "$1 görsel bulanıklaştırıldı"
+  changeImagesBlurred: "$1 görsel bulanıklaştırıldı"
+  changeAltText: Alternatif metin düzenlendi
+
+emptyGuide:
+  title: Bu kılavuz boş
+  subtitle: "Doldurmak için adım kaydedin"
+
+blurPanel:
+  title: "Smart Blur"
+  manualMode: "Manuel mod"
+  selectElements: Bulanıklaştırılacak öğeleri seçin
+  clickToBlur: "Bulanıklaştırmak için tıklayın"
+  done: Bitti
+  doneResume: "Bitti · Kayda devam et"
+  resetAll: "Tümünü sıfırla"
+
+screenshotView:
+  zoomIn: Yakınlaştır
+  zoomOut: Uzaklaştır
+  saved: Kaydedildi
+  editMenu: Ekran görüntüsünü düzenle
+  downloadEdited: "Düzenlenmiş görsel"
+  downloadOriginal: "Özgün görsel"
+  edit: "Düzenle"
+  addImage: Görsel ekle
+  replaceImage: Görseli değiştir
+  replaceHint: "Bu adım için yeni bir görsel seçin"
+  replaceDrop: "Göz atmak için tıklayın veya bir görseli buraya bırakın"
+  replaceFormats: "PNG, JPG veya WebP"
+  download: İndir
+  deleteImage: Görseli sil
+  deleteConfirm: "Bu ekran görüntüsü silinsin mi? Bu işlem geri alınamaz."
+  imageDeleted: Görsel silindi
+  altButton: ALT
+  altLabel: Alternatif metin
+  altPlaceholder: Bu görseli ekran okuyucular için açıklayın
+
+annotationEditor:
+  title: Ekran görüntüsünü düzenle
+  toolBox: Kutu
+  toolArrow: Ok
+  toolText: Metin
+  toolSelect: "Seç"
+  addTarget: "Tıklama hedefi ekle"
+  toolRedact: Karart
+  toolCrop: Kırp
+  colorLabel: "Renk"
+  textPlaceholder: Bir şeyler yazın…
+  targetBorder: Kenarlık stili
+  modeAnnotate: "Not ekle"
+  toolLine: "Çizgi"
+  duplicate: "Çoğalt"
+  toolEllipse: "Elips"
+  lineColor: "Çizgi rengi"
+  fillColor: "Dolgu rengi"
+  lineWidth: "Çizgi kalınlığı"
+  cornerRadius: "Köşe yarıçapı"
+  font: "Yazı tipi"
+  bold: "Kalın"
+  italic: "İtalik"
+  lineHeight: "Satır yüksekliği"
+  width_none: "Çerçeve yok"
+  width_xs: "Çok küçük"
+  width_sm: "Küçük"
+  width_ms: "Orta küçük"
+  width_md: "Orta"
+  width_ml: "Orta büyük"
+  width_lg: "Büyük"
+  width_xl: "Çok büyük"
+  zoom: "Yakınlaştırma"
+  cropHint: "Kırpmak için sürükleyin veya boyutlandırmak için bir köşeyi sürükleyin"
+  resetCrop: "Kırpmayı sıfırla"
+  arrowEnd: "Ok ucu"
+  fontSize: "Yazı tipi boyutu"
+  undo: "Geri al"
+  redo: "Yinele"
+  end_none: "Yok"
+  end_bar: "Çubuk"
+  end_arrow: "Ok"
+  end_arrow_solid: "Dolu ok"
+  end_circle: "Daire"
+  end_circle_solid: "Dolu daire"
+  end_square: "Kare"
+  end_square_solid: "Dolu kare"
+  done: Bitti
+
+exportPreview:
+  voiceover: "Seslendirme"
+  voiceoverHint: "Her adımı sesli okur. Adımlar, ses bitene kadar ekranda kalır."
+  audio: "Ses"
+  audioSilent: "Sessiz"
+  audioNarrated: "Seslendirilmiş"
+  voiceoverNoKey: "Videoları seslendirmek için Ayarlar'dan bir OpenAI veya ElevenLabs anahtarı ekleyin."
+  videoLength: "Video süresi $1"
+  videoLengthVoice: "Video süresi $1 → seslendirmeyle $2"
+  voiceoverCost: "$1 klip · yaklaşık $2 karakter seslendirilecek"
+  voiceoverFailed: "Seslendirme başarısız oldu. Ayarlar'daki API anahtarını kontrol edin."
+  voiceoverNoAudioCodec: "Video sessiz. Bu tarayıcı videolara ses ekleyemiyor."
+  voiceoverNoKeySkip: "Video sessiz. Ayarlar'dan bir seslendirme API anahtarı ekleyin."
+  voiceoverNothingToSay: "Video sessiz. Bu kılavuzda sesli okunacak metin yok."
+  narrating: "Adım $1 / $2 seslendiriliyor"
+  preparingVoiceover: "Seslendirme hazırlanıyor"
+  stepDescriptions: "Adım altyazıları"
+  stepDescriptionsHint: "Adım metnini her video karesinin üzerine çizer"
+  resolution: "Video kalitesi"
+  gifQuality: "GIF kalitesi"
+  gif_low: "Düşük"
+  gif_medium: "Orta"
+  gif_high: "Yüksek"
+  res_720p: "720p"
+  res_1080p: "1080p"
+  title: "Dışa aktarma önizlemesi"
+  cover: "Kapak sayfası"
+  coverHint: "Başlık ve ayrıntıların yer aldığı ayrı bir ilk sayfa"
+  screenshots: "Ekran görüntüleri"
+  screenshotsHint: "Sade, yalnızca metin içeren bir belge için kapatın"
+  stepUrls: "Adım bağlantıları"
+  stepUrlsHint: "Her adımın gerçekleştiği sayfa adresini gösterir"
+  imageScale: "Ekran görüntüsü boyutu"
+  scale_small: "Küçük"
+  scale_medium: "Orta"
+  scale_large: "Büyük"
+  download: "$1 olarak dışa aktar"
+  rendering: "Önizleme güncelleniyor"
+  videoReady: "$1 adım · yaklaşık $2 dk video"
+  videoReadyHint: "Uzun kılavuzlar otomatik olarak kodlanmaz. Önizleme tüm adımları kapsar."
+  videoGenerate: "Önizleme oluştur"
+  modeDocument: "Belge"
+  modeVideo: "Video"
+  encodingVideo: "Video önizlemesi kodlanıyor"
+  videoFailed: "Video önizlemesi oluşturulamadı"
+  bundle: "Mimik dosyası"
+  bundleHint: "Başkasının içe aktarıp düzenleyebileceği bir .mimik dosyası"
+  bundleStripInputs: "Yazılan metni kaldır"
+  bundleStripInputsHint: "Adım metinlerinden ve bağlantılardan kaldırır. Ekran görüntüleri ekranda olanı göstermeye devam eder."
+  bundleUrls: "Bağlantı ayrıntısı"
+  url_origin: "Site"
+  url_path: "Sayfa"
+  url_full: "Tam"
+  bundleRedactionNote: "Bulanıklaştırılan alanlar dışa aktarılan görsellerden silinir."
+  bundleTypedWarning: "$1 ekran görüntüsü yazdığınız metni gösteriyor. Paylaşmadan önce bulanıklaştırın."
+  bundleTypedWarningPlural: "$1 ekran görüntüsü yazdığınız metni gösteriyor. Paylaşmadan önce bulanıklaştırın."
+videoPlayer:
+  stepCount: "$1 adım"
+  previousStep: "Önceki adım"
+  nextStep: "Sonraki adım"
+  speed: "Oynatma hızı"
+  mute: "Sesi kapat"
+  unmute: "Sesi aç"
+  spoken: "Seslendirilmiş adım"
+  play: "Oynat"
+  pause: "Duraklat"
+  fullscreen: "Tam ekran"
+  exitFullscreen: "Tam ekrandan çık"
+
+exportMenu:
+  docx: DOCX
+  html: HTML
+  markdown: Markdown
+  pdf: PDF
+  gif: GIF
+  video: Video
+  cancelProgress: "İptal · %$1"
+  bundle: "Mimik dosyası"
+
+onboarding:
+  getStarted: Başlayın
+  blurTitle: "Smart Blur"
+  openMimik: Mimik'i aç
+  letterHello: "Bir şey daha 👋"
+  letterNote: "Ekipten bir not 👋"
+  letterThanks: "Bunu söylemeden geçemeyiz: $1 Son birkaç haftada Mimik'in GitHub yıldızları patladı ve bunu tamamen size borçluyuz. Onu arkadaşlarınızla, ekip arkadaşlarınızla ve topluluklarla paylaştınız; buna inanamıyoruz."
+  letterThankYou: "teşekkür ederiz."
+  letterWorld: "Mimik'i geliştirmenin en güzel yanı, dünyanın her yerinden insanların onu nasıl kullandığını görmek oldu. Size zaman ve para kazandırmaya devam etmesini ve verilerinizi ait oldukları yerde, yani sizde tutmasını umuyoruz. Bir fikriniz, özellik isteğiniz veya geri bildiriminiz mi var? $1. Her birini okuyoruz."
+  letterSayHi: "GitHub'da bize merhaba deyin"
+  letterNewsTitle: "🚀 Büyük haber: Mimik Desktop geldi!"
+  letterNewsBody: "Mimik eklentisinde sevdiğiniz her şey artık masaüstünüzde. Şimdi Windows için, Mac sürümü de yakında."
+  letterNewsAction: "Mimik Desktop'ı indirin"
+  letterPromiseTitle: "Önce bir söz"
+  letterPromise: "Mimik her zaman ücretsiz ve MIT lisanslı olacak. İleride ne bir tuzak ne de bir ödeme duvarı olacak. Bu, size ve çevresinde büyüyen harika topluluğa verdiğimiz söz."
+  letterAskTitle: "Ve küçük bir ricamız var 🙏"
+  letterAskIntro: "Mimik sizin sayenizde büyüyor, lütfen bu ivmeyi sürdürün:"
+  letterAskWrite: "Blogunuzda, bülteninizde veya sosyal medyada yazın (özellikle Reddit'te, Reddit'i çok seviyoruz!)"
+  letterAskVideo: "YouTube'da bir eğitim veya tanıtım videosu hazırlayın"
+  letterAskFriend: "Seveceğini düşündüğünüz bir arkadaşınıza veya ekip arkadaşınıza anlatın"
+  letterSponsor: "Her makale, video ve paylaşım Mimik'i daha fazla insanın bulmasına yardımcı oluyor; her birini fark ediyor ve çok seviyoruz. Daha da ileri gitmek ister misiniz? $1. Büyük ya da küçük her destek projenin gelişmesine yardımcı olur."
+  letterSponsorLink: "GitHub'da Mimik'e sponsor olabilirsiniz"
+  letterSignoff: "Sevgilerimizle,"
+  letterTeam: "Westpoint ekibi ❤️"
+  helloTitle: "Mimik'i yüklediğiniz için teşekkürler!"
+  helloMessage: "Bir işi her zamanki gibi bir kez yapın, Mimik her tıklamayı ekran görüntülü bir adıma dönüştürsün. Hadi kuralım, bir dakika sürer."
+  chipDevice: "Cihazınızda çalışır"
+  chipAccount: "Hesap gerekmez"
+  chipFree: "Ücretsiz ve MIT"
+  loginWelcome: "Tekrar hoş geldiniz"
+  loginReady: "Mimik hazır"
+  writeTitle: "Mimik adımlarınızı nasıl yazsın?"
+  writeMessage: "Her tıklama ekran görüntülü bir adım olur. Metninin nasıl yazılacağını seçin. Bunu istediğiniz zaman Ayarlar'dan değiştirebilirsiniz."
+  basicTitle: "Temel başlıklar"
+  basicMessage: "Tıkladığınız öğeden anlaşılır başlıklar. Hemen çalışır, kurulum gerekmez."
+  basicBest: "Mimik'i hemen denemek için ideal"
+  basicExample: "\"Billing\" öğesine tıklayın"
+  aiChoiceTitle: "AI açıklamaları"
+  aiChoiceMessage: "Kendi anahtarınızla, AI sağlayıcınızdan tam cümleler. Sesli anlatımı da açar."
+  aiChoiceMessageNoVoice: "Kendi anahtarınızla, AI sağlayıcınızdan tam cümleler."
+  aiBest: "Paylaştığınız kılavuzlar için ideal"
+  aiExample: "Faturalarınızı ve planınızı görmek için Billing sayfasını açın"
+  exampleMeta: "Adım 2 · Billing"
+  keyPrivacy: "Anahtarınız bu cihazda kalır ve yalnızca seçtiğiniz sağlayıcıya gider."
+  voiceToggleTitle: "Sesli anlatım"
+  voiceToggleHint: "Ne yaptığınızı söyleyin; Mimik bunu bir sonraki adıma ekler."
+  voiceNeedsKey: "Sesli anlatım, konuşmayı yazıya dökmek için OpenAI veya Groq kullanır. Bunlardan biri için anahtar ekleyin."
+  makeTitle: "Kendinize göre ayarlayın"
+  makeMessage: "Hepsi isteğe bağlı. Hepsini daha sonra Ayarlar'dan değiştirebilirsiniz."
+  brandTitle: "Dışa aktarımlarda markanız"
+  brandHint: "Dışa aktardığınız her PDF ve HTML kılavuzda logonuz ve renginiz."
+  blurHint: "Hiçbir şey cihazınızdan çıkmadan önce ekran görüntülerindeki hassas bilgileri bulanıklaştırın."
+  readyTitle: "Kayda hazırsınız"
+  readyStepOpen: "Mimik'i açın"
+  readyStepStart: "Kaydı başlat'a tıklayın"
+  readyStepClick: "Görevinizi tıklayarak yapın"
+  readyStepGuide: "Adım adım bir kılavuz alın"
+  pinHere: "Buraya sabitleyin"
+  pinCardTitle: "Kolay erişim için Mimik'i sabitleyin"
+  pinCardMessage: "Adres çubuğunun yanındaki yapboz simgesine tıklayın ve Mimik'i araç çubuğunuza sabitleyin."
+  pinMenuTitle: "Uzantılar"
+  trayTitle: "Mimik sistem tepsinizde"
+  trayMessage: "Saatin yanındaki Mimik simgesinden bir kayıt başlatın veya herhangi bir uygulamada $1 tuşuna basın."
+  menuBarTitle: "Mimik menü çubuğunuzda"
+  menuBarMessage: "Ekranınızın üstündeki Mimik simgesinden bir kayıt başlatın veya herhangi bir uygulamada $1 tuşuna basın."
+  starCardTitle: "Sonsuza kadar ücretsiz ve MIT"
+  starCardMessage: "Hesap yok, ödeme duvarı yok. GitHub'da bir yıldız, Mimik'i başkalarının bulmasına yardımcı olur."
+  demoApp: "Acme Admin"
+  demoTitle: "Bir ekip arkadaşını davet et"
+  demoField: "E-posta"
+  demoButton: "Davet gönder"
+  demoStepType: "E-posta alanına \"ana@acme.com\" yazın"
+  demoStepClick: "\"Davet gönder\" öğesine tıklayın"
+  demoPlusStep: "+1 adım"
+  demoGuideMeta: "2 adım · az önce"
+
+steps:
+  pressKey: '"$2" üzerinde $1 tuşuna basın'
+  toggleCheckbox: '"$1" seçeneğini değiştirin'
+  select: '"$1" seçeneğini seçin'
+  enter: '"$1" girin'
+  toggleSwitch: '"$1" anahtarını değiştirin'
+  clickLink: '"$1" bağlantısına tıklayın'
+  click: '"$1" öğesine tıklayın'
+  clickHere: "Buraya tıklayın"
+  rightClick: '"$1" öğesine sağ tıklayın'
+  rightClickHere: "Buraya sağ tıklayın"
+  typeIntoField: '"$2" $1 alanına yazın'
+  typeInto: '"$1" alanına yazın'
+  type: '"$1" yazın'
+  typeSecret: "Parolayı yazın"
+  copyFrom: '"$1" öğesinden kopyalayın'
+  pasteInto: '"$1" öğesine yapıştırın'
+  cutFrom: '"$1" öğesinden kesin'
+  drag: '"$1" öğesini sürükleyin'
+  typeValueInto: '$2 alanına "$1" yazın'
+  clearField: "$1 alanını temizleyin"
+  textField: "metin"
+  navigate: Sayfaya gidin
+  defaultAction: "$1 $2"
+
+export:
+  guideLabel: "KILAVUZ"
+  endLabel: "KILAVUZ TAMAMLANDI"
+  stepsRange: "Adım $1–$2 / $3"
+  stepOf: "Adım $1 / $2"
+  madeWith: "Mimik ile yapıldı"
+  created: Oluşturulma
+  source: Kaynak
+  step: Adım
+  steps: Adımlar
+  stepLabel: "Adım $1"
+  stepsCount: "$1 adım"
+  createdLabel: "Oluşturulma: $1"
+  sourceLabel: "Kaynak: $1"
+
+voice:
+  turnOn: Sesli anlatımı aç
+  turnOff: Sesli anlatımı kapat
+  needsApiKey: "Sesli anlatım için API anahtarı gerekir"
+  pausedWithCapture: Sesli anlatım kayıtla birlikte duraklatıldı
+  micStarting: Mikrofon başlatılıyor…
+  micHearing: Sizi duyuyor
+  micQuiet: Ses yok
+  nextRecording: Sesli anlatım açık ve bir sonraki kaydınızla başlar.
+  orderHint: Ne yapacağınızı söyleyin, sonra yapın. Sözleriniz bir sonraki işleme eklenir.
+  transcribing: Sesli anlatımınız yazıya dökülüyor…
+  transcribingHint: "Adım açıklamaları bu işlem bitince güncellenir."
+  narrated: "Sesli anlatım $1 adıma eklendi."
+  narratedPlural: "Sesli anlatım $1 adıma eklendi."
+  narratedNone: "Sesli anlatımınızın hiçbir bölümü bir adımla eşleşmedi."
+  guideSafe: "Kılavuzunuz ve ekran görüntüleriniz etkilenmedi."
+  openSettings: Ayarları aç
+  errorPermissionDenied: "Mikrofon erişimi engellendi."
+  errorNoDevice: "Mikrofon bulunamadı."
+  errorNoAudio: "Mikrofon hiç ses algılamadı."
+  errorMissingApiKey: "Sesli anlatım için bir yazıya dökme API anahtarı gerekir."
+  errorStreamEnded: "Mikrofon yarıda kesildi."
+  errorNotRecording: "Sesli anlatım çalışmıyordu."
+  errorAlreadyRecording: "Sesli anlatım zaten çalışıyordu."
+  errorUnsupported: Bu tarayıcı sesli anlatım kaydedemiyor.
+  errorUnknown: "Sesli anlatım beklenmedik şekilde durdu."
+
+micPermission:
+  title: Mikrofon erişimine izin verin
+  checkingMessage: "Mikrofon erişimi kontrol ediliyor…"
+  promptingMessage: "Tarayıcınızın sorduğu pencerede İzin ver'i seçin. Bu sekme kendiliğinden kapanır."
+  grantedTitle: Mikrofon hazır
+  grantedMessage: "Geri götürülüyorsunuz."
+  deniedTitle: Mikrofon erişimi engellendi
+  deniedMessage: "Adres çubuğunun solundaki simgeye tıklayın, Mikrofon'u İzin ver olarak ayarlayın ve yeniden deneyin."
+  retry: Yeniden dene
+  privacy: "Ses, yazıya dökme sağlayıcınıza gider. Mimik onu asla saklamaz."
+
+aiStatus:
+  rejected: "$1 API anahtarınızı reddetti."
+  noCredits: "$1 hesabınızda kredi yok."
+  rateLimited: "$1, Mimik'in isteklerini sınırlıyor."
+  modelInvalid: "$1 bu modeli hesabınıza sunmuyor."
+  quota: "Bu istek bu model için çok büyüktü."
+  network: "Mimik, $1 sağlayıcısına ulaşamadı."
+  unknown: "$1 isteği reddetti."
+  actionCheckKey: "Ayarlar'dan anahtarınızı kontrol edin."
+  actionAddCredits: "Kredi ekleyin, ardından anahtarı yeniden kontrol edin."
+  actionWait: "Daha fazla kaydetmeden önce biraz bekleyin."
+  actionPickModel: "Ayarlar'dan başka bir model seçin."
+  actionConnection: "Bağlantınızı kontrol edin."
+
+stepSource:
+  ai: "AI"
+  voice: "Ses"
+  basic: "Temel"
+  edited: "Düzenlendi"
+  hint: "Bu açıklamanın kaynağı"
+
+import:
+  title: "Kılavuzu içe aktar"
+  dialogDescription: "Kitaplığınıza eklemeden önce kılavuz dosyasını inceleyin"
+  button: "İçe aktar"
+  dropHere: "İçe aktarmak için bir .mimik dosyası bırakın"
+  reading: "Dosya okunuyor"
+  confirm: "Kitaplığa ekle"
+  cancel: "İptal"
+  guideMeHint: "$1 sitesinde kaydedildi. Guide Me yalnızca o sitede yeniden oynatılır."
+  noteRedacted: "Bulanıklaştırılan alanlar yazar tarafından kaldırıldı ve geri yüklenemez."
+  noteInputs: "Alanlara yazılan metin dahil edilmedi."
+  noteUrls: "Bağlantılar sayfa adresine kısaltıldı."
+  noteUrlsOrigin: "Bağlantılar site adresine kısaltıldı."
+  errorUnreadable: "Bu dosya açılamadı. Hasarlı veya eksik olabilir."
+  errorNotABundle: "Bu bir Mimik dosyası değil. Mimik'ten dışa aktarılmış bir dosya seçin."
+  errorVersion: "Bu dosya daha yeni bir Mimik sürümüyle oluşturuldu. Mimik'i güncelleyip yeniden deneyin."
+  errorEmpty: "Bu dosyada hiç adım yok."
+  errorFailed: "Kılavuz kitaplığınıza kaydedilemedi. Yeniden içe aktarmayı deneyin."
+transcript:
+  title: Konuşma dökümü
+  empty: Bu kayıtta hiçbir şey anlatılmadı.
+  loadError: Konuşma dökümü yüklenemedi. Yeniden deneyin.
+  filterAll: "Tümü ($1)"
+  filterUnused: "Kullanılmayan ($1)"
+  privacyNote: "Yalnızca bu cihazda tutulur. Dışa aktarılan kılavuzlara asla eklenmez ve kılavuzla birlikte silinir."
+  usedInStep: "Adım $1"
+  readOnlyHint: Bu satırları bir adıma eklemek için üst çubuktan Düzenle'yi açın.
+  notUsed: Kullanılmadı
+  filteredOut: Filtrelendi
+  addToStep: "$1. adıma ekle"
+  copyAll: Tümünü kopyala
+  download: İndir
+  delete: Konuşma dökümünü sil
+  confirmDelete: "Bu konuşma dökümü silinsin mi? Bu işlem geri alınamaz."
+
+stepKind:
+  click: "Tıklama"
+  type: "Yazma"
+  key: "Tuş"
+  navigate: "Sayfa"
+  note: "Not"

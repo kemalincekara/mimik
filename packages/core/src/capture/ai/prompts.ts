@@ -73,6 +73,7 @@ export const REWRITE_PRESETS = {
 export type RewritePreset = keyof typeof REWRITE_PRESETS;
 
 export const AI_LANGUAGES = [
+  { code: 'tr', label: 'Türkçe' },
   { code: 'en', label: 'English' },
   { code: 'zh-CN', label: '中文' },
   { code: 'es', label: 'Español' },
@@ -83,6 +84,8 @@ export const AI_LANGUAGES = [
 ] as const;
 
 export type AILanguageCode = (typeof AI_LANGUAGES)[number]['code'];
+
+export const DEFAULT_AI_LANGUAGE: AILanguageCode = 'tr';
 
 import { resolveByLocale } from './locale';
 
@@ -103,6 +106,7 @@ const LANGUAGE_INSTRUCTIONS: Record<Exclude<AILanguageCode, 'en'>, string> = {
   de: '\nWICHTIG: Schreibe die Ausgabe auf Deutsch. Übersetze keine Schaltflächen-, Feld- oder Seitennamen.',
   'zh-CN': '\n重要：请用中文输出。不要翻译按钮、字段和页面的名称。',
   ru: '\nВАЖНО: пиши результат на русском языке. Не переводи названия кнопок, полей и страниц.',
+  tr: '\nÖNEMLİ: Sonucu Türkçe yaz. Buton, alan ve sayfa adlarını çevirme.',
 };
 
 export function getLanguageSuffix(locale: string): string {

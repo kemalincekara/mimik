@@ -6,7 +6,7 @@ import {
   DEFAULT_AI_PROVIDER,
   isCustomModel,
 } from '@mimik/core/capture/ai/models';
-import type { AILanguageCode } from '@mimik/core/capture/ai/prompts';
+import { type AILanguageCode, DEFAULT_AI_LANGUAGE } from '@mimik/core/capture/ai/prompts';
 import { localStorage } from '@mimik/core/env';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -48,7 +48,7 @@ function defaultModelFor(provider: AiChoice): string {
 export function useAiSettings({ onDirty, reloadOnFocus = false }: Options = {}): AiSettingsState {
   const [provider, setProviderState] = useState<AiChoice>(DEFAULT_AI_PROVIDER);
   const [model, setModelState] = useState(AI_PROVIDERS[DEFAULT_AI_PROVIDER].defaultModel);
-  const [language, setLanguageState] = useState<AILanguageCode>('en');
+  const [language, setLanguageState] = useState<AILanguageCode>(DEFAULT_AI_LANGUAGE);
   const [customModel, setCustomModel] = useState(false);
   const [forSteps, setForStepsState] = useState(true);
   const [forGuide, setForGuideState] = useState(true);

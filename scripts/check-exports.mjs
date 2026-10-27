@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync } from 'node:fs';
-import { join, relative } from 'node:path';
+import { join, relative, sep } from 'node:path';
 import ts from 'typescript';
 
 const ROOTS = ['packages/ui/src', 'apps/extension/src/ui', 'apps/extension/src/lib', 'apps/desktop/src/renderer'];
@@ -36,7 +36,7 @@ function callables(sf) {
 }
 
 const problems = [];
-for (const file of ROOTS.flatMap(walk).map((f) => relative('.', f))) {
+for (const file of ROOTS.flatMap(walk).map((f) => relative('.', f).split(sep).join('/'))) {
   if (SKIP.test(file)) continue;
   const sf = ts.createSourceFile(file, readFileSync(file, 'utf8'), ts.ScriptTarget.Latest, true);
   const all = callables(sf);

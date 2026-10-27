@@ -11,6 +11,7 @@ import { app, BrowserWindow, dialog, ipcMain, Menu, nativeImage, protocol, scree
 import { createActor } from 'xstate';
 import { registerAiFetch } from './ai-fetch';
 import { APP_ICON_SCHEME, registerAppIconProtocol } from './app-icon';
+import { DEFAULT_APP_LOCALE } from './app-locale';
 import { ask } from './ask';
 import { DesktopRecorder, frameFor } from './capture/recorder';
 import { grabDisplay } from './capture/screenshot';
@@ -429,7 +430,7 @@ if (!app.requestSingleInstanceLock()) {
   });
 
   app.whenReady().then(() => {
-    mainI18n.setLocale(app.getLocale());
+    mainI18n.setLocale(DEFAULT_APP_LOCALE);
     if (!app.getLoginItemSettings().wasOpenedAsHidden) openSplash();
     registerScreenshotProtocol();
     registerAppIconProtocol();

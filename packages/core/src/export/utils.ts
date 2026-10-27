@@ -69,6 +69,7 @@ const LOCALE_MAP: Record<string, string> = {
   fr: 'fr',
   de: 'de-DE',
   ru: 'ru-RU',
+  tr: 'tr-TR',
   'zh-CN': 'zh-CN',
 };
 

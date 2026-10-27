@@ -2,10 +2,11 @@ import { AI_LANGUAGES } from '@mimik/core/capture/ai/prompts';
 import { i18n, localStorage } from '@mimik/core/env';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@mimik/ui';
 import { useEffect, useState } from 'react';
+import { DEFAULT_APP_LOCALE } from '../../main/app-locale';
 import { REOPEN_SETTINGS } from './lib/reopen-settings';
 
 export function AppLanguage() {
-  const [chosen, setChosen] = useState('system');
+  const [chosen, setChosen] = useState<string>(DEFAULT_APP_LOCALE);
 
   useEffect(() => {
     localStorage.get(['appLanguage']).then(({ appLanguage }) => appLanguage && setChosen(appLanguage));

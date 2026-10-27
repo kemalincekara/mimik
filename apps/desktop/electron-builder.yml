@@ -29,7 +29,7 @@ fileAssociations:
     mimeType: application/x-mimik
 publish:
   provider: github
-  owner: westpoint-io
+  owner: kemalincekara
   repo: mimik
 mac:
   category: public.app-category.productivity

@@ -1,29 +1,23 @@
 name: Desktop Windows release
 
 on:
+  push:
+    tags:
+      - "desktop-v*"
   workflow_dispatch:
-  workflow_call:
-    secrets:
-      AZURE_TENANT_ID:
-        required: false
-      AZURE_CLIENT_ID:
-        required: false
-      AZURE_CLIENT_SECRET:
-        required: false
 
 concurrency:
   group: desktop-windows-release-${{ github.ref }}
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   windows:
-    name: Signed Windows installer
+    name: Unsigned Windows installer
     runs-on: windows-latest
     timeout-minutes: 45
-    environment: desktop-production
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -34,6 +28,19 @@ jobs:
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: "22"
+          cache: pnpm
+
+      - name: Resolve the release tag
+        id: tag
+        shell: bash
+        run: |
+          version=$(node -p "require('./apps/desktop/package.json').version")
+          tag="desktop-v${version}"
+          if [ "$GITHUB_REF_TYPE" = "tag" ] && [ "$GITHUB_REF_NAME" != "$tag" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match apps/desktop/package.json version $version" >&2
+            exit 1
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
 
       - run: pnpm install --frozen-lockfile
 
@@ -43,35 +50,23 @@ jobs:
       - name: Build the app
         run: pnpm build:desktop
 
-      - name: Package and sign the installer
+      - name: Package the installer
+        run: pnpm --filter @mimik/desktop exec electron-builder --win --publish never
+
+      - name: Publish the release
+        shell: bash
         env:
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-        run: pnpm --filter @mimik/desktop exec electron-builder --win --config electron-builder.signed.yml --publish never
-
-      - name: Verify the signatures
-        shell: pwsh
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.tag.outputs.tag }}
         run: |
-          $files = Get-ChildItem -Path apps/desktop/dist -Recurse -Filter *.exe
-          if ($files.Count -eq 0) { throw "No executables in apps/desktop/dist" }
-          foreach ($file in $files) {
-            $signature = Get-AuthenticodeSignature -FilePath $file.FullName
-            $subject = $signature.SignerCertificate.Subject
-            Write-Host "$($file.FullName): $($signature.Status) $subject"
-            if ($signature.Status -ne "Valid" -or $subject -notlike "*CN=Westpoint Software Solutions Limited*") {
-              throw "$($file.Name) is not signed by Westpoint Software Solutions Limited"
-            }
-            if (-not $signature.TimeStamperCertificate) { throw "$($file.Name) has no timestamp" }
-          }
-          $updateConfig = Get-Content -Raw -Path apps/desktop/dist/win-unpacked/resources/app-update.yml
-          if ($updateConfig -notmatch "publisherName:\s*\r?\n\s*-\s*Westpoint Software Solutions Limited") { throw "app-update.yml does not pin the publisher" }
-
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: mimik-windows-signed
-          path: |
-            apps/desktop/dist/*.exe
-            apps/desktop/dist/*.exe.blockmap
-            apps/desktop/dist/latest.yml
-          if-no-files-found: error
+          shopt -s nullglob
+          files=(apps/desktop/dist/*.exe apps/desktop/dist/*.exe.blockmap apps/desktop/dist/latest.yml)
+          if [ ${#files[@]} -lt 3 ]; then
+            echo "Missing installer, blockmap or latest.yml in apps/desktop/dist" >&2
+            exit 1
+          fi
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+            gh release upload "$TAG" "${files[@]}" --repo "$GITHUB_REPOSITORY" --clobber
+          else
+            gh release create "$TAG" "${files[@]}" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "Mimik Desktop ${TAG#desktop-v}" --generate-notes --latest
+          fi
